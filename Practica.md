@@ -29,7 +29,7 @@ zone "paloma.gonzalonazareno.org" {
 };
 zone "22.172.in-addr.arpa" {
         type master;
-        file "db.200.22.172";
+        file "db.22.172";
 };
 zone "0.0.10.in-addr.arpa" {
         type master;
@@ -38,7 +38,7 @@ zone "0.0.10.in-addr.arpa" {
 ~~~
 
 
-Se configuran los ficheros anteriormente citados: db.paloma.gonzalonazareno.org, db.200.22.172 y db.0.0.10.
+Se configuran los ficheros anteriormente citados: db.paloma.gonzalonazareno.org, db.22.172 y db.0.0.10.
 
 Configuración de la resolución directa en db.paloma.gonzalonazareno.org:
 ~~~
@@ -67,7 +67,7 @@ cloud           IN  CNAME   salmorejo
 mysql           IN  CNAME   tortilla-int
 ~~~
 
-Configuración de la resolución inversa de la ip externa en /var/cache/bind/db.200.22.172:
+Configuración de la resolución inversa de la ip externa en /var/cache/bind/db.22.172:
 ~~~
 $TTL    86400
 @               IN      SOA     croqueta.paloma.gonzalonazareno.org. palomagarciacampon08.gonzalonazareno.org (
@@ -79,7 +79,7 @@ $TTL    86400
 ;
 @               IN      NS      croqueta.paloma.gonzalonazareno.org.
 
-$ORIGIN 200.22.172.in-addr.arpa.
+$ORIGIN 22.172.in-addr.arpa.
 200.124             IN      PTR	croqueta.paloma.gonzalonazareno.org.
 200.144             IN      PTR	tortilla.paloma.gonzalonazareno.org.
 200.133             IN      PTR	salmorejo.paloma.gonzalonazareno.org.
@@ -210,13 +210,13 @@ paloma@coatlicue:~/DISCO2/CICLO II/SERVICIO DE RED E INTERNET/DNS$ dig @croqueta
 ; EDNS: version: 0, flags:; udp: 4096
 ; COOKIE: 77e8cd42c4082b063442e2a85ddb9a67b721165451aa6c49 (good)
 ;; QUESTION SECTION:
-;133.200.22.172.in-addr.arpa.	IN	PTR
+;133.22.172.in-addr.arpa.	IN	PTR
 
 ;; ANSWER SECTION:
-133.200.22.172.in-addr.arpa. 86400 IN	PTR	salmorejo.paloma.gonzalonazareno.org.
+133.22.172.in-addr.arpa. 86400 IN	PTR	salmorejo.paloma.gonzalonazareno.org.
 
 ;; AUTHORITY SECTION:
-200.22.172.in-addr.arpa. 86400	IN	NS	croqueta.paloma.gonzalonazareno.org.
+22.172.in-addr.arpa. 86400	IN	NS	croqueta.paloma.gonzalonazareno.org.
 
 ;; ADDITIONAL SECTION:
 croqueta.paloma.gonzalonazareno.org. 604800 IN A 172.22.200.124
