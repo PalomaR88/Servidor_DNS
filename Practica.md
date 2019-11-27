@@ -27,7 +27,7 @@ zone "paloma.gonzalonazareno.org" {
         type master;
         file "db.paloma.gonzalonazareno.org";
 };
-zone "200.22.172.in-addr.arpa" {
+zone "22.172.in-addr.arpa" {
         type master;
         file "db.200.22.172";
 };
@@ -80,9 +80,9 @@ $TTL    86400
 @               IN      NS      croqueta.paloma.gonzalonazareno.org.
 
 $ORIGIN 200.22.172.in-addr.arpa.
-124             IN      PTR	croqueta.paloma.gonzalonazareno.org.
-144             IN      PTR	tortilla.paloma.gonzalonazareno.org.
-133             IN      PTR	salmorejo.paloma.gonzalonazareno.org.
+200.124             IN      PTR	croqueta.paloma.gonzalonazareno.org.
+200.144             IN      PTR	tortilla.paloma.gonzalonazareno.org.
+200.133             IN      PTR	salmorejo.paloma.gonzalonazareno.org.
 
 ~~~
 
