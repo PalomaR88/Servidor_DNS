@@ -11,11 +11,12 @@ El servidor DNS se va a instalar en el servidor1 (croqueta). Y en un primer mome
 - Debes determinar si la resolución directa se hace con dirección ip fijas o flotantes del cloud depediendo del servicio que se este prestando.
 - Debes considerar la posibilidad de hacer dos zonas de resolución inversa para resolver ip fijas o flotantes del cloud.
 
-Instalación de bind9:
+#### Instalación de bind9:
 ~~~
 debian@croqueta:~$ sudo apt install bind9
 ~~~
 
+#### Configuración:
 Hay que añadir la siguiente línea al fichero de configuración /etc/bind/named.conf.options:
 ~~~
         allow-query{172.22.0.0/16; 192.168.202.0/24;};
@@ -105,7 +106,7 @@ $ORIGIN 0.0.10.in-addr.arpa.
 ~~~
 
 
-
+#### Comprobaciones:
 
 Entrega el resultado de las siguientes consultas a los servidores de nuestra red :
 - El servidor DNS con autoridad sobre la zona del dominio tu_nombre.gonzalonazareno.org
